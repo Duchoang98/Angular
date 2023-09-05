@@ -1,49 +1,7 @@
-<!--
-  ngIf and ngFor
-   <ul>
-    <ng-container *ngIf="users.length > 3; else noUsers">
-    <li
-      *ngFor="
-        let user of users;
-        index as idx;
-        count as total;
-        first as isFirst;
-        last as isLast;
-        even as isEven;
-        odd as isOdd
-      "
-    >
-      <span>I am the {{ idx }} out of {{ total }}</span>
-      <br />
-      <span *ngIf="isEven">I am the even</span>
-      <br />
-      <span *ngIf="isOdd">I am the odd</span>
-      <br />
-      <span *ngIf="isFirst">I am the first element</span>
-      <br />
-      <span *ngIf="isLast">I am the last element</span>
-    </li>
-  </ng-container>
-  <ng-template #noUsers>
-    There is no user
-  </ng-template>
-</ul>
--->
-
-<!--
-  Class binding
-  <p class="hoang" style="color: red">This is the p</p>
-  <button (click)="isDanger = !isDanger">Toggle Danger</button>
-  <br /><br />
-  <button (click)="isWarning = !isWarning">Toggler Warning</button>
-  <br /><br />
-  
-  <div [class]="{ 'red-color': isWarning, 'yellow-background': isDanger }">
-    text
-  </div>
-  <div [class.red-color]="isDanger" [class.yellow-background]="isWarning">Text2</div> 
-  <div [class]="classes">This</div>
--->
-
-<p [style.color]="'red'">Color blue</p>
-<div [style]="{'color': 'red', 'backgrond-color': 'yellow', 'fontSize': '20px'}">Color</div>
+<button (click)="currentProgress = currentProgress + 1">Increase progress</button>
+<br>
+<br>
+<button (click)="currentProgress = currentProgress - 1">Decrease progress</button>
+<br>
+<br>
+<app-progess-bar [progress]="currentProgress" [backgroundColor]="'dodgerblue'" ></app-progess-bar>

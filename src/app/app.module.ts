@@ -5,12 +5,15 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HiComponent } from './hi/hi.component';
 import { FormsModule } from '@angular/forms';
+import { ProgessBarComponent } from './progess-bar/progess-bar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    HiComponent
+    HiComponent,
+    ProgessBarComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  currentProgress = 70;
   title = 'angular100day';
 
   value = 'value';
