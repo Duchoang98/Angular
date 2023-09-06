@@ -38,4 +38,7 @@ export class AppComponent {
   isWarning = false;
 
   classes = "box red-color yellow-background"
+
+  isChecked = true
+
 }

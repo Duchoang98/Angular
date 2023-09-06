@@ -5,7 +5,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-
+import { Author, authors } from '../authors.model';
 @Component({
   selector: 'app-progess-bar',
   templateUrl: './progess-bar.component.html',
