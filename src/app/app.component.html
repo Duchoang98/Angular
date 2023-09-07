@@ -1,1 +1,12 @@
-<toggle [(checked)]="isChecked"></toggle>
+<button (click)="showLast = !showLast">Click me</button>
+<toggle #toggleComponent [(checked)]="isChecked"></toggle>
+<toggle #toggleComponent [(checked)]="isChecked"></toggle>
+<toggle #toggleComponent [(checked)]="isChecked"></toggle>
+<ng-container *ngIf="showLast">
+  <toggle #toggleComponent [(checked)]="isChecked"></toggle>
+</ng-container>
+
+<input #nameInput />
+<!-- <button (click)="toggleComponent.toggle()">Click me to toggle</button> -->
+
+<button #toggleButton></button>

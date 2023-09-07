@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewContainerRef, ViewChildren } from '@angular/core';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @Component({
   selector: 'app-root',
@@ -6,39 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  currentProgress = 70;
-  title = 'angular100day';
-
-  value = 'value';
-  inputType = 'text';
-  users = [
-    {
-      name: 'Hoang',
-      age: 25,
-    },
-    {
-      name: 'Duc',
-      age: 26
-    },
-    {
-      name: 'NGUYEN',
-      age: 12
-    },
-    {
-      name: 'Anh',
-      age: 29
-    }
-  ];
-
-  handler() {
-    console.log('clicked');
-  }
-
-  isDanger = false;
-  isWarning = false;
-
-  classes = "box red-color yellow-background"
 
   isChecked = true
+  showLast = true
+
+  @ViewChild(ToggleComponent, {static: true, read: ElementRef}) toggleComp: ToggleComponent;
+  @ViewChild('nameInput') nameInput : ElementRef<HTMLInputElement>;
+  @ViewChild('toggleButton', {static: true}) toggleButton : ElementRef<HTMLButtonElement>
+  @ViewChildren(ToggleComponent) toggleComps : QueryList<ToggleComponent>
+
+  
+  ngOnInit() {
+    setTimeout(() => {
+      this.nameInput.nativeElement.focus();
+    }, 3000);
+    console.log('onInit', this.toggleComp)
+    console.log(this.toggleButton)
+  }
+  ngAfterViewInit(){
+    console.log('toggleComps', this.toggleComps.changes.subscribe(console.log))
+
+  }
 
 }
