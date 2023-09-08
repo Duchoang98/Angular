@@ -1,12 +1,4 @@
-<button (click)="showLast = !showLast">Click me</button>
-<toggle #toggleComponent [(checked)]="isChecked"></toggle>
-<toggle #toggleComponent [(checked)]="isChecked"></toggle>
-<toggle #toggleComponent [(checked)]="isChecked"></toggle>
-<ng-container *ngIf="showLast">
-  <toggle #toggleComponent [(checked)]="isChecked"></toggle>
-</ng-container>
-
-<input #nameInput />
-<!-- <button (click)="toggleComponent.toggle()">Click me to toggle</button> -->
-
-<button #toggleButton></button>
+ <flex-component [flexDirection]="'row'">
+    <p>Some</p>
+    <p>Ting</p>
+ </flex-component>

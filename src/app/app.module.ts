@@ -9,6 +9,7 @@ import { ProgessBarComponent } from './progess-bar/progess-bar.component';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
 import { ToggleComponent } from './toggle/toggle.component';
+import { FlexComponent } from './flex/flex.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ToggleComponent } from './toggle/toggle.component';
     AuthorListComponent,
     AuthorDetailsComponent,
     ToggleComponent,
+    FlexComponent,
   ],
   imports: [
     BrowserModule,
