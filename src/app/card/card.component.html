@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">You have selected <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container></div>
+  <div class="card-body">
+    There are <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container>was
+    selected.
+  </div>
+  <div class="card-footer">
+    You have selected
+    <ng-container [ngTemplateOutlet]="counterTemplate"></ng-container>
+  </div>
+</div>
+
+<ng-template #counterTemplate>
+  <span class="badge badge-primary">{{ counter }}</span> items.
+</ng-template>

@@ -10,6 +10,8 @@ import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { FlexComponent } from './flex/flex.component';
+import { CardComponent } from './card/card.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { FlexComponent } from './flex/flex.component';
     AuthorDetailsComponent,
     ToggleComponent,
     FlexComponent,
+    CardComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
